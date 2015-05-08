@@ -1,0 +1,153 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{aeguill}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+\usepackage[hmargin=1cm, vmargin=1.5cm, noheadfoot, a4paper]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\og~{{\fontencoding{T1}\selectfont%
+	   \guillemotleft}}
+\def\fg\ {\unskip{\fontencoding{T1}\selectfont%
+	   \guillemotright}\space}
+
+\def\fpg{\fg \unskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\renewcommand{\ttdefault}{pcr}
+%\renewcommand{\bfdefault}{pcr}
+%\renewcommand{\ttdefault}{pag}
+%\renewcommand{\ttdefault}{cmbfib}
+
+\newcommand{\myfont}[1]{\texttt{#1}}
+%\newcommand{\myfont}[1]{\textbf{#1}}
+
+%\usepackage{DejaVuSansMono}
+%% \usepackage{dejavu}
+%\renewcommand*\familydefault{\ttdefault}
+%\newcommand{\myfont}[1]{\bfseries{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\width{15mm}
+\def\height{13mm}
+\def\corner{3mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\key}[6]{%
+  \node (a) at ($ (#1*\width,#2*\height) + (#1*\corner,#2*\corner) $) {};
+  \draw[white,fill=black,rounded corners=1mm] %
+  ($ (a) $) -- ++(\width,0mm) -- ++(0mm,\height) -- ++(-\width,0mm) -- cycle;
+  \draw[fill=black] %
+  ($ (a) + (\width,\height) $) -- ++(\corner,0mm) -- ++(-\corner,\corner) -- cycle;
+  \draw[white] ($ (a) + (1/3*\width,1/3*\height-.5mm) $) node {\myfont{\large{#3}}};
+  \draw[white] ($ (a) + (1/3*\width,2/3*\height+.5mm) $) node {\myfont{\large{#4}}};
+  \draw[white] ($ (a) + (2/3*\width,1/3*\height-.5mm) $) node {\myfont{\large{#5}}};
+  \draw[white] ($ (a) + (2/3*\width,2/3*\height+.5mm) $) node {\myfont{\large{#6}}};
+}
+
+\newcommand{\skey}[4]{%
+  \node (a) at ($ (#1*\width,#2*\height) + (#1*\corner,#2*\corner) $) {};
+  \draw[white,fill=black,rounded corners=1mm] %
+  ($ (a) $) -- ++(\width,0mm) -- ++(0mm,\height) -- ++(-\width,0mm) -- cycle;
+  \draw[fill=black] %
+  ($ (a) + (\width,\height) $) -- ++(\corner,0mm) -- ++(-\corner,\corner) -- cycle;
+  \draw[white] ($ (a) + (1/3*\width,1/2*\height) $) node {\myfont{\large{#3}}};
+  \draw[white] ($ (a) + (2/3*\width,1/2*\height) $) node {\myfont{\large{#4}}};
+}
+
+\begin{document}
+\begin{tikzpicture}
+  \skey{0}{0}{é}{0}
+  \skey{1}{0}{`}{1}
+  \skey{2}{0}{à}{2}
+  \skey{3}{0}{è}{3}
+  \skey{4}{0}{ù}{4}
+  \skey{5}{0}{'}{5}
+  \skey{6}{0}{"}{6}
+  \skey{7}{0}{(}{7}
+  \skey{8}{0}{[}{8}
+  \skey{9}{0}{\{}{9}
+  %
+  \key{0}{1}{\textbar}{\&}{}{}
+  \key{1}{1}{\#}{\%}{}{}
+  \key{2}{1}{!}{?}{}{}
+  \key{3}{1}{=}{*}{}{}
+  \key{4}{1}{-}{+}{}{}
+  \key{5}{1}{\$}{@}{}{}
+  \key{6}{1}{\textasciitilde}{\textasciicircum}{}{}
+  \skey{7}{1}{/}{}
+  \key{8}{1}{.}{:}{}{}
+  \key{9}{1}{,}{;}{}{}
+% \key{0}{2}{\textasciicircum}{..}{}{}
+% \skey{1}{2}{<}{{\fontencoding{T1}\selectfont\guillemotleft}}
+\end{tikzpicture}
+
+% using $$
+% \begin{tikzpicture}
+%   \key{0}{0}{é}{É}{0}{}
+%   \key{1}{0}{`}{}{1}{}
+%   \key{2}{0}{à}{À}{2}{}
+%   \key{3}{0}{è}{È}{3}{}
+%   \key{4}{0}{ù}{Ù}{4}{}
+%   \key{5}{0}{'}{}{5}{}
+%   \key{6}{0}{"}{}{6}{}
+%   \key{7}{0}{(}{)}{7}{}
+%   \key{8}{0}{[}{]}{8}{}
+%   \key{9}{0}{\{}{\}}{9}{}
+%   \key{0}{1}{\textbar}{\&}{}{}
+%   \key{1}{1}{\#}{\%}{}{}
+%   \key{2}{1}{!}{?}{}{}
+%   \key{3}{1}{$=$}{*}{$\circ$}{}
+%   \key{4}{1}{$-$}{$+$}{}{}
+%   \key{5}{1}{\$}{@}{}{}
+%   \key{6}{1}{\textasciitilde}{\textasciicircum}{}{}
+%   \key{7}{1}{/}{\textbackslash}{}{}
+%   \key{8}{1}{.}{:}{}{}
+%   \key{9}{1}{,}{;}{}{}
+%   \key{0}{2}{\textasciicircum}{..}{}{}
+%   \key{1}{2}{$<$}{$>$}{{\fontencoding{T1}\selectfont\guillemotleft}}{{\fontencoding{T1}\selectfont\guillemotright}}
+% \end{tikzpicture}
+
+%  \key{}{}{.}{,}{}{}
+%  \key{}{}{}{A}{}{}
+%  \key{}{}{}{C}{}{Ç}
+%  \key{}{}{}{E}{\euro{}}{}
+%  \key{}{}{}{M}{}{}
+%  \key{}{}{}{Q}{}{}
+%  \key{}{}{}{W}{}{}
+%  \key{}{}{}{Z}{}{}
+%
+%  \key{}{}{\hspace{1ex}\scriptsize{Alt}}
+%  \key{}{}{\scriptsize{mode}}{\scriptsize{multi}}{}{}
+%  \key{}{}{\scriptsize{mode}}{\scriptsize{multi}}{}{}
+%  \key{}{}{\scriptsize{mode}}{\scriptsize{multi}}{}{}
+%  \key{}{}{\scriptsize{Suppr}}
+%  \key{}{}{\scriptsize{Suppr}}
+%  \key{}{}{\scriptsize{Insert}}
+%  \key{}{}{\tiny{sys req}}{}{}{}
+%
+%  \key{}{}{}{}{}{}
+%  \key{}{}{}{}{}{}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

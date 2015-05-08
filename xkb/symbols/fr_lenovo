@@ -1,0 +1,113 @@
+// -*- c -*-
+// Copyright (c) 2013 Salvaire Fabrice : GPL
+// Thinkpad Keyboard85 keys + 5 special keys (84-key, 85-key, or 89-key)
+
+// Row 1: 1 + 12 + 4  17
+// Row 2: 10 + 3 + 1  14
+// Row 3: 1 + 10 + 2 + 1 Enter  14
+// Row 4: 1 + 10 + 2  13
+// Row 5: 2 + 6 + 4 + 1  13
+// Row 6: 4 + 1 + 3  8
+// block: 6
+
+default
+xkb_symbols "thinkpad85" {
+  include "pc(pc105)"
+
+  name[Group1]="Lenovo";
+  name[Group2]="Symbols";
+  include "level3(ralt_switch)" // Right Alt = Alt Gr
+  include "group(win_switch)" // select group 2
+   
+  // include "fr_lenovo(modifier)"
+  // include "fr_lenovo(edition)"
+  include "fr_lenovo(fr)"
+  include "fr_lenovo(symbols)"
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "modifier" {
+  key <RWIN> { [ Mode_switch , Multi_key ] };
+  // key <RALT> { [ Alt_R , Meta_R ] }; // default
+  // key <RALT> { [ Mode_switch , Multi_key ] };
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "edition" {
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "fr" {
+  // Row 3
+  key <AD01> { [ a , A, Greek_alpha ],
+               [ U2227 ] }; // and ∧
+  key <AD02> { [ z , Z ] };
+  key <AD03> { [ e , E , EuroSign , Greek_epsilon ],
+               [ Greek_eta ] }; // € ε
+  key <AD04> { [ r , R, Greek_rho ] };
+  key <AD05> { [ t , T, Greek_theta, Greek_tau ] };
+  key <AD06> { [ y , Y ] };
+  key <AD07> { [ u , U ] };
+  key <AD08> { [ i , I ] };
+  key <AD09> { [ o , O , oe , OE ],
+               [ U2228, U22BB ] }; // or ∨, xor ⊻
+  key <AD10> { [ p , P, Greek_pi, Greek_PI ],
+                [ Greek_psi, Greek_PSI ] };
+  // Row 4
+  key <AC01> { [ q , Q ] };
+  key <AC02> { [ s , S, Greek_sigma, Greek_SIGMA ] };
+  key <AC03> { [ d , D, Greek_delta, Greek_DELTA ] };
+  key <AC04> { [ f , F ] };
+  key <AC05> { [ g , G, Greek_gamma, Greek_GAMMA ] };
+  key <AC06> { [ h , H ] };
+  key <AC07> { [ j , J ] };
+  key <AC08> { [ k , K, Greek_khi, Greek_KHI ] };
+  key <AC09> { [ l , L, Greek_lambda ] };
+  key <AC10> { [ m , M, Greek_mu ] };
+  // Row 5
+  key <AB01> { [ w , W, Greek_omega, Greek_OMEGA ] };
+  key <AB02> { [ x , X ] };
+  key <AB03> { [ c , C , ccedilla , Ccedilla ] };
+  key <AB04> { [ v , V , registered , copyright ] };
+  key <AB05> { [ b , B, Greek_beta ] };
+  key <AB06> { [ n , N, Greek_nu ],
+               [ U00AC ] }; // not ¬
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "symbols" {
+  // Row 1
+  key <TLDE> { [ eacute          , Eacute         , 0 ] };
+  key <AE01> { [ grave           , grave          , 1 ] };
+  key <AE02> { [ agrave          , Agrave         , 2 ] };
+  key <AE03> { [ egrave          , Egrave         , 3 ] };
+  key <AE04> { [ ugrave          , Ugrave         , 4 ] };
+  key <AE05> { [ apostrophe      , apostrophe     , 5 ] };
+  key <AE06> { [ quotedbl        , quotedbl       , 6 ] };
+  key <AE07> { [ parenleft       , parenright     , 7 ] };
+  key <AE08> { [ bracketleft     , bracketright   , 8 ] };
+  key <AE09> { [ braceleft       , braceright     , 9 ] };
+  key <AE10> { [ bar             , ampersand      ] };
+  key <AE11> { [ numbersign      , percent        ] };
+  key <AE12> { [ exclam          , question       ] };
+  // Row 2
+  key <AD11> { [ dead_circumflex , dead_diaeresis ] };
+  key <AD12> { [ minus           , plus           ],
+               [ U2295, U2296, U00B1 ] }; // ⊕, ⊖, ±
+  // Row 3
+  key <AC11> { [ equal           , asterisk       , degree ],
+               [ U00D7, U2297 ] }; // ×, ⊗
+  key <BKSL> { [ dollar          , at             ] };
+  // Row 4
+  key <LSGT> { [ less            , greater        , guillemotleft , guillemotright ] };
+  key <AB07> { [ asciitilde      , asciicircum    ],
+               [ U2192, U2190 ] }; // →, ←
+  key <AB08> { [ slash           , backslash      ] };
+  key <AB09> { [ period          , colon          ] };
+  key <AB10> { [ comma           , semicolon      ] };
+  // Row 5
+  key <SPCE> { [ space           , underscore     ],
+               [ U2500 ] }; // ─
+};
+
+// End

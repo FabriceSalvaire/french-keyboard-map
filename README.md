@@ -1,4 +1,4 @@
-# Custom French Keyboard Map for Developer
+# Custom French Keyboard Layout for Developer
 
 Since the French Keyboard has a really bad layout for a developer use case, I use a custom X11
 keyboard setup and label sticker on modified keys.
@@ -8,7 +8,7 @@ keyboard setup and label sticker on modified keys.
 
 ## Layout
 
-This custom map features
+This custom layout features
 
 * a standard Azerty layout
 * Greek and some math characters on Azerty

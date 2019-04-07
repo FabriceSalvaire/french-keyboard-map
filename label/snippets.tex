@@ -1,0 +1,17 @@
+\def\keybox{\draw[white,fill=black,rounded corners=1mm]
+  ($ (a) $) -- ++(\width,0cm) -- ++(0cm,\height) -- ++(-\width,0cm) -- cycle}
+\node (a) at ($ 1*(\width,0) $) {};
+\keybox;
+\draw[white, anchor=south west] ($ (a) + (1mm,1mm)   $) node {\textbf{\large}};
+\draw[white, anchor=south west] ($ (a) + (1mm,6.5mm) $) node {\textbf{\large{É}}};
+\draw[white, anchor=south west] ($ (a) + (5.5mm,1mm) $) node {\textbf{\large{0}}};
+\node (a) at ($ 2*(\width,0) $) {};
+\keybox;
+\draw[white, anchor=south west] ($ (a) + (1mm,1mm) $) node {\textbf{\large{é}}};
+\draw[white, anchor=south west] ($ (a) + (1mm,6.5mm) $) node {\textbf{\large{É}}};
+\draw[white, anchor=south west] ($ (a) + (5.5mm,1mm) $) node {\textbf{\large{0}}};
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

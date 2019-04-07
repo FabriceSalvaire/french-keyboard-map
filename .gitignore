@@ -1,0 +1,10 @@
+__TRASH__
+*~
+
+label/auto/
+label/*.aux
+label/*.log
+
+links/
+xkb-fr.txt
+xkb-lenovo.txt

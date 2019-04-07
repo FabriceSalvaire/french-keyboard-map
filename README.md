@@ -58,6 +58,7 @@ Steps are mainly
 
 * print the PDF on a A4 sheet sticker, label are more duable with a plastified transparent layer
 * look **install** shell script to setup X11
+* run `setxkbmap frl` `or setxkbmap fr_cherry`
 
 # Official French Layouts
 
@@ -73,3 +74,11 @@ Standard Québécois
 # Other French Layouts
 
 * https://qwerty-lafayette.org
+
+# X11 Documentation
+
+* https://www.freedesktop.org/wiki/Software/XKeyboardConfig
+* https://www.x.org/wiki/XKB
+
+* https://www.x.org/releases/X11R7.5/doc/man/man1/setxkbmap.1.html
+* https://www.x.org/releases/X11R7.5/doc/man/man1/xkbprint.1.html

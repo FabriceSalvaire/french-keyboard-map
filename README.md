@@ -3,7 +3,7 @@
 Since the French Keyboard has a really bad layout for a developer use case, I use a custom X11
 keyboard setup and label sticker on modified keys.
 
-![Lenovo Keyboard](/lenovo-keyboard.jpg)
+![Thinkpad Keyboard](/thinkpad-keyboard.jpg)
 
 
 ## Layout

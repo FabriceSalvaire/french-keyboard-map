@@ -1,5 +1,9 @@
 // -*- c -*-
-// Copyright (c) 2013 Salvaire Fabrice : GPL
+// Copyright (c) 2017 Salvaire Fabrice : GPL
+//
+// Modifier: None, Shift, AltGr, AltGr+Shift
+// Select Group 2: Window + ( None, Shift, AltGr, AltGr+Shift )
+//
 // Thinkpad Keyboard85 keys + 5 special keys (84-key, 85-key, or 89-key)
 
 // Row 1: 1 + 12 + 4  17
@@ -18,7 +22,7 @@ xkb_symbols "thinkpad85" {
   name[Group2]="Symbols";
   include "level3(ralt_switch)" // Right Alt = Alt Gr
   include "group(win_switch)" // select group 2
-   
+
   // include "fr_lenovo(modifier)"
   // include "fr_lenovo(edition)"
   include "fr_lenovo(fr)"
@@ -92,7 +96,7 @@ xkb_symbols "symbols" {
   key <AE12> { [ exclam          , question       ] };
   // Row 2
   key <AD11> { [ dead_circumflex , dead_diaeresis ] };
-  key <AD12> { [ minus           , plus           ],
+  key <AD12> { [ minus           , plus           , emdash ],
                [ U2295, U2296, U00B1 ] }; // ⊕, ⊖, ±
   // Row 3
   key <AC11> { [ equal           , asterisk       , degree ],

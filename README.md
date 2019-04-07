@@ -14,7 +14,7 @@ This custom map features
 * Greek and some math characters on Azerty
 * a direct `~ / .` key row for Unix path
 * a direct access to French diacritics `é à è ù` and their capitals using Shift modifier
-* an ordered 0123456789 key row using AltGr modifier
+* an ordered `0 1 2 3 4 5 6 7 8 9` key row using AltGr modifier
 * a direct `( [ {` key row with closing `) ] }` accessible by Shift, a good editor can insert the closing charater automatically
 * symbol characters are grouped by usage : `|&   #%   !?   -+   =*   $@   ~^   /\   .:   ,;`
 * `_` is mapped on Shift+Space

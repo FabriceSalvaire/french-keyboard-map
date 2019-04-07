@@ -73,7 +73,14 @@ Standard Québécois
 
 # Other French Layouts
 
+* http://bepo.fr
+* https://fr.wikipedia.org/wiki/B%C3%A9po
 * https://qwerty-lafayette.org
+
+# Other English Layouts
+
+* https://en.wikipedia.org/wiki/Keyboard_layout
+* https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard
 
 # X11 Documentation
 

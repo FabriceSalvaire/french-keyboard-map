@@ -18,6 +18,11 @@ This custom map features
 * symbol characters are grouped by usage : |& #% !? -+ =* $@ ~^ /\ .: ,;
 * _ is mapped on Shift+Space
 
+## Setup
+
+* print the PDF on a A4 sheet sticker, label are more duable with a plastified transparent layer
+* look **install** shell script to setup X11
+
 ## Layout
 
 `Key = No Modifier [Shift] [AltGr]`

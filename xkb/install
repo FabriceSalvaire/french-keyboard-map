@@ -1,0 +1,10 @@
+#! /usr/bin/bash
+
+cp rules/evdev.xml /usr/share/X11/xkb/rules/evdev.xml
+
+cp symbols/{frc,fr_cherry,flr,fr_lenovo} /usr/share/X11/xkb/symbols
+pushd /usr/share/X11/xkb/symbols
+/usr/bin/xkbcomp -lfhlpR -o ../symbols.dir '*'
+popd
+
+# finally setup KDE

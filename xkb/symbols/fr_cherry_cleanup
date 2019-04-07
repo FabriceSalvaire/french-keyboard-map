@@ -1,0 +1,141 @@
+// -*- c -*-
+// Copyright (c) 2003 Salvaire Fabrice : GPL
+
+// Réf: G81-3000LPNEU-1 / 00
+// us 104 touches
+
+default
+xkb_symbols "pc104" {
+  // utilise les définitions standard
+  include "pc(pc105)"
+  // include "keypad(x11)"
+
+  name[Group1]="Cherry";
+
+  include "fr_cherry(modifier)"
+  include "fr_cherry(edition)"
+  include "fr_cherry(fr)"
+  include "fr_cherry(symbols)"
+  include "fr_cherry(keypad)"
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "modifier" {
+  // à droite
+  key <LWIN> { [ dead_circumflex, dead_diaeresis ] };
+
+  // à gauche
+  // key <RALT> { [ Alt_R , Meta_R ] }; // default
+  // key <RALT> { [ Mode_switch , Multi_key ] };
+  key <RWIN> { [ Mode_switch , Multi_key ] };
+  key <MENU> { [ Mode_switch , Multi_key ] };
+  // key <MENU> { [ Compose ] };
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "edition" {
+  // Bloc d'édition
+  key <INS> { [ Delete ] };
+
+  // Bloc 3 touches
+  key <SCLK> { [ Insert ] };
+  key <PAUS> { [ Insert ] };
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "fr" {
+  // row 2
+  key <AD01> { [ a , A ] };
+  key <AD02> { [ z , Z ] };
+  key <AD03> { [ e , E , EuroSign , Greek_epsilon ] }; // € ε
+  key <AD04> { [ r , R ] };
+  key <AD05> { [ t , T ] };
+  key <AD06> { [ y , Y ] };
+  key <AD07> { [ u , U ] };
+  key <AD08> { [ i , I ] };
+  key <AD09> { [ o , O , oe , OE ] };
+  key <AD10> { [ p , P ] };
+
+  // row 3
+  key <AC01> { [ q , Q ] };
+  key <AC02> { [ s , S ] };
+  key <AC03> { [ d , D ] };
+  key <AC04> { [ f , F ] };
+  key <AC05> { [ g , G ] };
+  key <AC06> { [ h , H ] };
+  key <AC07> { [ j , J ] };
+  key <AC08> { [ k , K ] };
+  key <AC09> { [ l , L ] };
+  key <AC10> { [ m , M ] };
+
+  // row 4
+  key <AB01> { [ w , W ] };
+  key <AB02> { [ x , X ] };
+  key <AB03> { [ c , C, ccedilla , Ccedilla ] };
+  key <AB04> { [ v , V, registered , copyright ] };
+  key <AB05> { [ b , B ] };
+  key <AB06> { [ n , N ] };
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "symbols" {
+  // 1ère rangé
+  key <TLDE> { [ eacute      , Eacute       , 0 ] };
+  key <AE01> { [ grave                      , 1 ] };
+  key <AE02> { [ agrave      , Agrave       , 2 ] };
+  key <AE03> { [ egrave      , Egrave       , 3 ] };
+  key <AE04> { [ ugrave      , Ugrave       , 4 ] };
+  key <AE05> { [ apostrophe                 , 5 ] };
+  key <AE06> { [ quotedbl                   , 6 ] };
+  key <AE07> { [ parenleft   , parenright   , 7 ] };
+  key <AE08> { [ bracketleft , bracketright , 8 ] };
+  key <AE09> { [ braceleft   , braceright   , 9 ] };
+  key <AE10> { [ bar         , ampersand    ]  };
+  key <AE11> { [ numbersign  , percent      ]  };
+  key <AE12> { [ exclam      , question     ]  };
+
+  // 2ème rangé
+  key <AD11> { [ equal , asterisk , degree ] };
+  key <AD12> { [ minus , plus ] };
+  key <BKSL> { [ less , greater , guillemotleft , guillemotright ] };
+
+  // 3ème rangé
+  key <AC11> { [ dollar , at ] };
+
+  // 4ème rangé
+  key <AB07> { [ asciitilde  , asciicircum ] };
+  key <AB08> { [ slash       , backslash   ] };
+  key <AB09> { [ period      , colon       ] };
+  key <AB10> { [ comma       , semicolon   ] };
+
+  // 5ème rangé
+  key <SPCE> { [ space , underscore ] };
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "keypad" {
+  // pour le fonctionnement normale de Num_Lock et de Pointer_EnableKeys utiliser KP_
+  // Shift+Num_Lock active Pointer_EnableKeys, et une seconde fois désactive cette fonctionnalité
+  // Bidouille qui marche si Num_Lock est désactivé au préalable
+  // sinon Ctrl, Tab ... ne marchent plus dans KDE par exemple!
+  // key <NMLK> { [ Num_Lock    , Pointer_EnableKeys ]  };
+  // key <IO2>  { [ Num_Lock    , Pointer_EnableKeys ]  };
+
+  key <KPDV> { [ slash      , slash    ] };
+  key <KPMU> { [ asterisk   , asterisk ] };
+  key <KPSU> { [ minus      , minus    ] };
+  key <KPAD> { [ plus       , plus     ] };
+  key <KP7>  { [ 7          , 7        ] };
+  key <KP8>  { [ 8          , 8        ] };
+  key <KP9>  { [ 9          , 9        ] };
+  key <KP4>  { [ 4          , 4        ] };
+  key <KP5>  { [ 5          , 5        ] };
+  key <KP6>  { [ 6          , 6        ] };
+  key <KP1>  { [ 1          , 1        ] };
+  key <KP2>  { [ 2          , 2        ] };
+  key <KP3>  { [ 3          , 3        ] };
+  key <KP0>  { [ 0          , 0        ] };
+  key <KPDL> { [ KP_Decimal , comma    ] };
+};
+
+// End

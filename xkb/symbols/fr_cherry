@@ -291,5 +291,3 @@ xkb_symbols "greek" {
   key <AB05> { symbols[Group2] = [ Greek_beta  ] }; // b β
 
 };
-
-// End

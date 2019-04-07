@@ -113,5 +113,3 @@ xkb_symbols "symbols" {
   key <SPCE> { [ space           , underscore     ],
                [ U2500 ] }; // ─
 };
-
-// End

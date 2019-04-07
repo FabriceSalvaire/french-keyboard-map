@@ -137,5 +137,3 @@ xkb_symbols "keypad" {
   key <KP0>  { [ 0          , 0        ] };
   key <KPDL> { [ KP_Decimal , comma    ] };
 };
-
-// End

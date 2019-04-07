@@ -58,3 +58,18 @@ Steps are mainly
 
 * print the PDF on a A4 sheet sticker, label are more duable with a plastified transparent layer
 * look **install** shell script to setup X11
+
+# Official French Layouts
+
+Standard Français AFNOR
+
+* https://www.afnor.org/actualites/clavier-francais-norme-volontaire-ecriture-francais
+* https://www.boutique.afnor.org/norme/nf-z71-300/interfaces-utilisateurs-dispositions-de-clavier-bureautique-francais/article/901594/fa188960
+
+Standard Québécois
+
+* https://www.tresor.gouv.qc.ca/ressources-informationnelles/architecture-dentreprise-gouvernementale/standards-et-normes/standard-sur-le-clavier-quebecois-sgqri-001/
+
+# Other French Layouts
+
+* https://qwerty-lafayette.org
